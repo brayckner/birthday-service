@@ -1,12 +1,11 @@
+mod controller;
+mod service;
+
+use crate::controller::hello_controller::hello_world;
 use actix_cors::Cors;
 use actix_web::http::header;
-use actix_web::{get, web, web::ServiceConfig};
+use actix_web::{web, web::ServiceConfig};
 use shuttle_actix_web::ShuttleActixWeb;
-
-#[get("/")]
-async fn hello_world() -> &'static str {
-    "Hello birthday service!"
-}
 
 #[shuttle_runtime::main]
 async fn main() -> ShuttleActixWeb<impl FnOnce(&mut ServiceConfig) + Send + Clone + 'static> {
