@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+actix-cors = "0.7.1"
 actix-web = "4"
 shuttle-actix-web = "0.55"
 shuttle-runtime = "0.55"
